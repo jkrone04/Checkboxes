@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>Checkboxes</title>
+</head>
+
+<body>
+	<form>
+		<div><label id="all" for="box0">Check All</label>
+		<input type="checkbox" id="box0" /></div>
+
+		<div><label for="box1">Box 1</label>
+		<input type="checkbox" id="box1" /></div>
+
+		<div><label for="box2">Box 2</label>
+		<input type="checkbox" id="box2" /></div>
+
+		<div><label for="box3">Box 3</label>
+		<input type="checkbox" id="box3" /></div>
+
+		<div><label for="box4">Box 4</label>
+		<input type="checkbox" id="box4" /></div>
+
+		
+	</form>
+
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+	<script language="javascript">
+		$('#box0').click(function() {
+			if(document.getElementById('all').innerHTML == "Check All") {
+				$('#box1').attr('checked', 'true');
+				$('#box2').attr('checked', 'true');
+				$('#box3').attr('checked', 'true');
+				$('#box4').attr('checked', 'true');
+				document.getElementById('all').innerHTML = "Uncheck All";
+			}
+			else {
+				$('#box1').removeAttr('checked');
+				$('#box2').removeAttr('checked');
+				$('#box3').removeAttr('checked');
+				$('#box4').removeAttr('checked');
+				document.getElementById('all').innerHTML = "Check All";
+			}
+		});
+		
+	</script>
+</body>
+</html>
